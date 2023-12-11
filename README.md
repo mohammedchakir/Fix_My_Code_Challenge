@@ -50,6 +50,6 @@ Something is going wrong…, It doesn’t look right…
 
 
 -----------------
-## Author:
+## Author 📑:
 
 [MOHAMMED CHAKIR](https://github.com/mohammedchakir)
