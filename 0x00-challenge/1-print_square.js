@@ -1,43 +1,24 @@
 #!/usr/bin/node
 /*
-    Print a square with the character '#'
+    Print a square with the character #
     
     The size of the square must be the first argument 
     of the program.
 */
 
-<<<<<<< HEAD
-// Check if the command line argument is missing
+
 if (process.argv.length <= 2) {
     process.stderr.write("Missing argument\n");
     process.stderr.write("Usage: ./1-print_square.js <size>\n");
     process.stderr.write("Example: ./1-print_square.js 8\n");
-    process.exit(1); // Exit the program if the argument is missing
-}
-
-// Parse the size argument as an integer (base 10)
-let size = parseInt(process.argv[2], 10);
-
-// Loop to create rows of the square
-for (let i = 0; i < size; i++) {
-    // Loop to create columns of the square
-    for (let j = 0; j < size; j++) {
-        process.stdout.write("#"); // Print the '#' character
-=======
-
-if (process.argv.length <= 2) {
-    process.stderr.write("Missing argument\n");
-    process.stderr.write("Usage: ./print_square.js <size>\n");
-    process.stderr.write("Example: ./print_square.js 8\n");
-    process.exit(1);
+    process.exit(1)
 }
 
 let size = parseInt(process.argv[2], 10);
 
-for (let i = 0; i < size; i++) {
-    for (let j = 0; j < size; j++) {
+for (let i = 0 ; i < size ; i ++) {
+    for (let j = 0 ; j < size ; j ++) {
         process.stdout.write("#");
->>>>>>> c9d8f70d79f42e96634e77f470c0f2f57d9d3e54
     }
     process.stdout.write("\n");
 }
