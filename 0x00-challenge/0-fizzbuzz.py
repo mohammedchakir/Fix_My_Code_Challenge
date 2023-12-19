@@ -12,8 +12,7 @@ def fizzbuzz(n):
     multiples of five print "Buzz".
     For numbers which are multiples of both three and five print "FizzBuzz".
     Args:
-        n (int): The upper limit for the FizzBuzz sequence.
-        
+    n (int): The upper limit for the FizzBuzz sequence.
     Returns: None
     """
     if n < 1:
@@ -34,7 +33,8 @@ def fizzbuzz(n):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="FizzBuzz")
-    parser.add_argument("number", type=int, help="Upper limit for FizzBuzz sequence")
+    parser.add_argument(
+            "number", type=int, help="Upper limit for FizzBuzz sequence")
     args = parser.parse_args()
 
     FIZZ = 3  # Constant for multiples of 3
