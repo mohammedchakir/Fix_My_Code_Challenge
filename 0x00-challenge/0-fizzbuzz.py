@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# This line ensures the script runs with Python 3
 
 def fizzbuzz(n):
     """
