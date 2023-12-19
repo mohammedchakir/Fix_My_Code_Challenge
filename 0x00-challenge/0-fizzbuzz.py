@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """FizzBuzz"""
 
 import sys
+import argparse
 
 
 def fizzbuzz(n):
@@ -10,17 +11,21 @@ def fizzbuzz(n):
     For multiples of three print "Fizz" instead of the number and for
     multiples of five print "Buzz".
     For numbers which are multiples of both three and five print "FizzBuzz".
+    Args:
+        n (int): The upper limit for the FizzBuzz sequence.
+        
+    Returns: None
     """
     if n < 1:
         return
 
     tmp_result = []
     for i in range(1, n + 1):
-        if (i % 3) == 0 and (i % 5) == 0:
+        if i % FIZZ == 0 and i % BUZZ == 0:
             tmp_result.append("FizzBuzz")
-        elif (i % 3) == 0:
+        elif i % FIZZ == 0:
             tmp_result.append("Fizz")
-        elif (i % 5) == 0:
+        elif i % BUZZ == 0:
             tmp_result.append("Buzz")
         else:
             tmp_result.append(str(i))
@@ -28,11 +33,11 @@ def fizzbuzz(n):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) <= 1:
-        print("Missing number")
-        print("Usage: ./fizzbuzz.py <number>")
-        print("Example: ./fizzbuzz.py 89")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="FizzBuzz")
+    parser.add_argument("number", type=int, help="Upper limit for FizzBuzz sequence")
+    args = parser.parse_args()
 
-    number = int(sys.argv[1])
-    fizzbuzz(number)
+    FIZZ = 3  # Constant for multiples of 3
+    BUZZ = 5  # Constant for multiples of 5
+
+    fizzbuzz(args.number)
