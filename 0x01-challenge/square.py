@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ this script describe a class of square that calcul perimeter """
+import math
 
 
 class Square():
-    """ Square class. """
+    """ A class representing a square. """
     width = 0
     height = 0
 
@@ -13,20 +14,20 @@ class Square():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """Calculate the area of the square."""
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ Permiter of the square """
+        """Calculate the perimeter of the square."""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ String representation of the square instance """
+         """A string representation of the square."""
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    """ Create Square instance """
+    """ Creating a Square instance """
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
