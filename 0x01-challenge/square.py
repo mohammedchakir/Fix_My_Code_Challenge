@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ this script describe a class of square that calcul perimeter """
 
+
 class Square():
     """ Square class. """
     width = 0
